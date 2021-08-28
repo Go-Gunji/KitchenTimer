@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mStartButton = (ImageView) findViewById(R.id.timerStart);
         mStopButton = (ImageView) findViewById(R.id.timerStop);
 
-        CountDownTimer timer = new CountDownTimer(5*1000, 100) {
+        CountDownTimer timer = new CountDownTimer(3*60*1000, 100) {
             // 指定した間隔で実行したい処理
             @Override
             public void onTick(long millisUntilFinished) {
