@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,5 +40,19 @@ public class MainActivity extends AppCompatActivity {
                 mTimerText.setText("0:00");
             }
         };
+
+        mStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timer.start();
+            }
+        });
+
+        mStopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timer.cancel();
+            }
+        });
     }
 }
